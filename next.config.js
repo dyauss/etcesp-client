@@ -22,7 +22,7 @@ module.exports = {
         destination: '/ListaClientes/ListaClientes'
       },
       {
-        source: '/cliente/:id', // Defina o padrão da URL com um parâmetro ":id"
+        source: '/cliente/:id',
         destination: '/Cliente/Cliente?id=:id',
       },
       {

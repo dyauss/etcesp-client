@@ -86,7 +86,7 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a className="sd-link" href={'/users'}>
+                <a className="sd-link" href={'/lista-clientes'}>
                   Lista de clientes
                 </a>
               </li>
