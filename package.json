@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@apollo/client": "^3.8.6",
+    "@ckeditor/ckeditor5-react": "^6.1.0",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
@@ -19,11 +20,13 @@
     "apollo-link-context": "^1.0.20",
     "axios": "^1.6.0",
     "bulma": "^0.9.4",
+    "ckeditor5-custom-build": "file:./ckeditor5-40.0.0-u6vo8iwqzsgr",
     "generate-react-cli": "^8.3.0",
     "graphql": "^16.8.1",
     "next": "14.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hydrate": "^0.9.1"
   },
   "devDependencies": {
     "@types/node": "^20",

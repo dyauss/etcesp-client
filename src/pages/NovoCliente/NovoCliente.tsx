@@ -1,9 +1,16 @@
-import React, { FC, useState } from 'react';
+import { CKEditor } from '@ckeditor/ckeditor5-react'
+import Editor from 'ckeditor5-custom-build/build/ckeditor';
+
+import React, { FC, useState, useEffect } from 'react';
 import { useMutation, gql } from "@apollo/client";
 import Link from "next/link";
 import { useRouter } from 'next/router';
 
+import { RichText } from '../../shared/rich-text/RichText';
+
 import { ADD_CLIENTE } from '../../shared/constantes/Constantes';
+
+import dynamic from 'next/dynamic'
 
 interface NovoClienteProps {}
 
@@ -24,6 +31,10 @@ const NovoCliente: FC<NovoClienteProps> = () => {
   const [cep, setCep] = useState('');
   const [email, setEmail] = useState('');
   const [telefone, setTelefone] = useState('');
+
+  const RichText = dynamic(() => import('../../shared/rich-text/RichText'), {
+    ssr: false
+  });
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -70,7 +81,6 @@ const NovoCliente: FC<NovoClienteProps> = () => {
                />
             </div>
           </div>
-
           <div className="field">
             <label className="label">CPF/CNPJ</label>
             <div className="control has-icons-left has-icons-right">
@@ -253,6 +263,8 @@ const NovoCliente: FC<NovoClienteProps> = () => {
               <Link className="button is-link is-light"  href="/lista-clientes">Cancelar</Link>
             </div>
           </div>
+
+          <RichText />
         </section>
       </div>
     </form>
